@@ -1,0 +1,53 @@
+{
+
+    "appetizers": [{
+        "name": "Chicken Tenders",
+        "ingredients": ["Chicken", "Breading"],
+        "description": "Hot, fried chicken strips."
+    }, {
+        "name": "Cheese Fries",
+        "ingredients": ["Cheese Blend", "Fries"],
+        "description": "Hot cheese-covered fries."
+    }],
+
+    "coldSandwiches": [{
+        "name": "Turkey",
+        "ingredients": ["Bread", "Turkey", "Mayonnaise", "Lettuce"],
+        "description": "Deli-cut, fresh turkey sandwich."
+    }, {
+        "name": "Ham",
+        "ingredients": ["Bread", "Ham", "Lettuce", "Tomato", "Mayonnaise"],
+        "description": "Deli-cut, fresh ham sandwich"
+    }],
+
+    "hotSandwiches": [{
+        "name": "Turkey Bacon Avocado",
+        "ingredients": ["Bread", "Turkey", "Mayonnaise", "Lettuce", "Avocado"],
+        "description": "Grilled, textured, full-bodied sandwich."
+    }, {
+        "name": "Bacon Lettuce Tomato",
+        "ingredients": ["Bread", "Bacon", "Lettuce", "Tomato", "Mayonnaise"],
+        "description": "Simple, beautiful, and a crunchy sandwich delight."
+    }],
+
+    "desserts": [{
+        "name": "Hot Fudge Sundae",
+        "ingredients": ["Vanilla Bean Ice Cream", "Hot Fudge", "Peanuts"],
+        "description": "Ooey, gooey hot fudge-covered vanilla bean ice cream."
+    }, {
+        "name": "Apple Lattice Pie",
+        "ingredients": ["Crust", "Granny Smith Apples", "Sugar", "Cinnamon"],
+        "description": "America's most delicious cinnamon-riddled pie."
+    }],
+
+    "drinks": [{
+        "name": "Raspberry Lemonade",
+        "ingredients": ["Fresh Raspberries", "Lemons", "Sugar", "Water"],
+        "description": "Thirst-quenching, sweet, tart, and fruity lemonade."
+    }, {
+        "name": "Blueberry Pomegranate Lime-ade",
+        "ingredients": ["Blueberries", "Limes", "Sprite", "Pomegranate Syrup"],
+        "description": "Garbage drink. Avoid at all costs."
+    }]
+
+}

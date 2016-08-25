@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Baloo+Tamma" rel="stylesheet">
+        <link rel="stylesheet" href="enemy.css">
+    </head>
+    <body>
+        <!-- header section -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 head_image">
+                    <img src="http://www.theaveragegamer.com/wp-content/uploads/2013/02/Wreck-It-Ralph-Bad-Anon.jpg" class="img-responsive">    
+                </div>
+            </div>
+        </div>
+
+        <!-- content section -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center content">
+                    <h1>CREATURE GENERATOR</h1>
+                    <hr>
+                </div>
+            </div>
+
+            <!-- button to add 100 monsters -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <button id="add-monster" type="button" class="btn btn-lg btn-info add">Add Monsters</button>
+                </div>
+            </div>
+
+            <div id="append-monster" class="row well">
+                <!-- table column headers -->
+                <div class="col-lg-12">
+                    <div class="row text-center">
+                        <div class="col-sm-3 table-header">
+                            <h4>Number</h4>
+                        </div>
+                        <div class="col-sm-3 table-header">
+                            <h4>Monster</h4>
+                        </div>
+                        <div class="col-sm-3 table-header">
+                            <h4>Hit Points</h4>
+                        </div>
+                        <div class="col-sm-3 table-header">
+                            <h4>Defense</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- this is where enemy.js is appending new enemies -->
+            </div>
+        </div>
+
+        <script src="enemy.js"></script>
+        
+    </body>
+</html>

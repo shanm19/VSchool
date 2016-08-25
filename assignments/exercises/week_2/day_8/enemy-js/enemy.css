@@ -1,0 +1,33 @@
+.head_image{
+    padding: 0;
+}
+.img-responsive{
+    max-height: 250px;
+    width: 100%;
+}
+body{
+    font-family: 'Amatic SC', cursive;
+}
+.content h1{
+    font-size: 5em;
+    font-weight: 900;
+}
+.add{
+    font-size: 3em;
+    margin: 1em;
+}
+.table-header h4{
+    font-size: 3em;
+    font-weight: 700;
+}
+.table-content{
+    font-weight: 700;
+}
+.table-content h4{
+    font-size: 2em;
+}
+hr{
+    background-color: #555;
+    height: 1px;
+    border-radius: 2px;
+}
