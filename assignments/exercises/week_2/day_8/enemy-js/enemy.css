@@ -31,3 +31,31 @@ hr{
     height: 1px;
     border-radius: 2px;
 }
+
+@media only screen and (max-width: 768px){
+
+    .col-sm-3 {
+        width: 20%;
+        display: inline-block;
+        margin: .5em;
+        
+    }
+    .table-header {
+        padding: 0;
+        text-align: center;
+    }
+    .table-header h4 {
+        font-family: "Helvetica Neue";
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .table-content h4 {
+        font-family: "Helvetica Neue";
+        font-size: .9em;
+        text-align: center;
+        margin: 0;
+    }
+    .well {
+        padding: .3em;
+    }
+}

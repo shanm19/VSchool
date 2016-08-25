@@ -46,7 +46,7 @@ function generator(){
     
     //append the entire column to #append-monster
     appendElem.innerHTML += 
-        '<div class="row text-center">' + 
+        '<hr><div class="row text-center">' + 
             '<div class="col-sm-3 table-content">' +
                 '<h4>' + creatureNum + '</h4>' +
             '</div>' + 
