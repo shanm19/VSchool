@@ -1,0 +1,74 @@
+/*body section*/
+body{
+    color: #555;
+    background-color: lightblue;
+}
+/*header*/
+.header{
+    color: #555;
+    background-color: lightcoral;
+    border-radius: .4em;
+    border-color: lightgray;
+    text-align: center;
+    font-size: 2em;
+}
+/*navigation bar*/
+.nav_bar{
+    float: left;
+    border-radius: .4em;
+    list-style-type: none;
+    margin: 0;
+    margin-right: 3em;
+    padding: 0;
+    width: 10em;
+    background-color: lightcoral;
+}
+.nav_bar a{
+    color: #555;
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+}
+.nav_bar a:hover {
+    background-color: #555;
+    border-radius: .4em;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: lightcoral;
+}
+a:hover{
+    text-decoration: underline;
+}
+/*about the photographer*/
+.about_section h1{
+    text-align: center;
+}
+.about_section p{
+    line-height: 2em;
+}
+/*pictures of dogs*/
+.picture_section p{
+    line-height: 2em;
+    text-align: center;
+}
+.main_page img{
+    display: block;
+    margin: auto;
+    margin-bottom: 2em;
+    width: 30em;
+    border-radius: .4em;
+}
+.main_section h2{
+    text-align: center;
+}
+/*footer section*/
+footer_left{
+    display: inline;
+    float: left;
+}
+footer_right{
+    display: inline;
+    float: right;
+}

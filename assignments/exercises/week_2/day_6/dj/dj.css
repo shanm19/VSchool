@@ -1,0 +1,36 @@
+body{
+    background: #1c1c1c;
+}
+.dj_name{
+    color: lime;
+    text-align: center;
+    text-shadow: 2px 2px 2px white;
+}
+.dj_name h1{
+    font-size: 5em;
+}
+.square_center{
+    margin: 0 auto;
+}
+.the_square{
+    border: solid gray;
+    border-radius: 3px;
+    position: fixed;
+    width: 40em;
+    height: 40em;
+    margin: 0 auto; 
+    left: 0;
+    right: 0;
+    margin-top: 10%;
+    background: white;
+}
+@media screen and (max-width: 768px){
+    .dj_name h1{
+        font-size: 4em;
+    }
+    .the_square{
+        width: 20em;
+        height: 20em;
+        margin-top: 40%;
+    }
+}

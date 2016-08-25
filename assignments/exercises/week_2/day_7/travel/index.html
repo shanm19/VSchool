@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="travel.css">
+    </head>
+    <body>
+      <div class="banner">
+          <h1>Time to Fly</h1>
+      </div>
+       <div class="backdrop">
+       <br><br><br>
+        <form name="travel_form" class="form-container" onsubmit="handleLogin(); return false;">
+           
+            <div class="form-title"><h1>Pick Your Destination</h1></div>
+            <input id="firstName" name="firstName" type="text" class="form-field" placeHolder="First Name">
+            <input id="lastName" type="text" class="form-field" placeHolder="Last Name">
+            <input id="age" type="number" class="form-field" placeHolder="Age">
+            <label class="radio-section">
+            <h3>Gender: </h3>
+               
+                <label>
+                    <input id="male" value="Male" name="gender" type="radio" class="radio-button">
+                    Male
+                    <br>
+                </label>
+                <label>
+                    <input id="female" value="Female" name="gender" type="radio" class="radio-button">
+                    Female
+                    <br>
+                </label>
+                <label>
+                    <input id="other" value="Other" name ="gender" type="radio" class="radio-button">
+                    Other
+                </label>
+            </label>
+            
+            <h3 style="margin-top: 20px;">Destination:</h3>
+            <select id="destination" class="selection">
+                <option value="Aruba">Aruba</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="Bermuda">Bermuda</option>
+                <option value="Bahama">Bahama</option>
+                <option value="Key Largo">Key Largo</option>
+                <option value="Montego">Montego</option>
+                <option value="Kokomo">Kokomo</option>
+            </select>
+            
+            <div class="checkbox">
+               <h3>Dietary Restrictions: </h3>
+                <label>
+                    <input id="vegetarian" type="checkbox">Vegetarian
+                </label>
+                <br>
+                <label>
+                    <input id="kosher" type="checkbox">Kosher
+                </label>
+                <br>
+                <label>
+                    <input id="lactose" type="checkbox">Lactose-Free
+                </label>
+            </div>
+            <div class="submit-container">
+            <button type="submit" class="submit-button">Enter</button>
+            </div>
+        </form>
+        <br><br><br>
+        </div>
+        <script src="travel.js"></script>
+    </body>
+</html>

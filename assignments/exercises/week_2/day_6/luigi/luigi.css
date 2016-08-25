@@ -1,0 +1,27 @@
+.head{
+    font-family: "Super Mario 256";
+    background: yellow;
+    color: red;
+}
+.luigi_name{
+    padding-left: 3.5em;
+}
+.luigi_pic{
+    text-align: center;
+    background: red;
+}
+.luigi_pic img{
+    margin: 2em;
+}
+.about_section{
+    background: white;
+    text-align: center;
+}
+.footer img{
+    float: right;
+    max-width: 4em;
+    padding: 5px;
+}
+.info p{ 
+    font-family: verdana;
+}

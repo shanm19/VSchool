@@ -1,0 +1,48 @@
+h1 {
+    color: darkgreen;
+}
+
+h1, 
+h3 {
+    font-family: 'Georgia';
+    text-align: center;
+}
+
+p {
+    font: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.see_also {
+    text-transform: uppercase;
+}
+
+img {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 5px;
+    border-style: solid;
+    border-color: black;
+    
+}
+
+div{
+    padding: 25px;
+    margin: 20px;
+    background-color: #757575;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+body{
+    background-color: #444444;
+}

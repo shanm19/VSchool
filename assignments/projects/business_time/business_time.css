@@ -1,0 +1,30 @@
+.banner{
+    text-align: center;
+}
+.banner h1{
+    font-size: 4em;
+}
+.navbar-inverse{
+    background: #292b2e;
+    border-radius: 0;
+}
+.nav_redesign:hover{
+    color: white;
+}
+.content{
+    text-align: justify;
+}
+.celebs h2{
+    text-align: center;
+}
+img{
+    border: solid 2px;
+}
+.img-responsive.img-center {
+    max-height: 25em;
+    margin: 0 auto;
+    margin-bottom: 5em;
+}
+body{
+    background-color: #d2d2d2;
+}

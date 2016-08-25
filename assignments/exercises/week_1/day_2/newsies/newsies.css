@@ -1,0 +1,50 @@
+.newspaper {
+    text-align:justify;
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+span.highlight {
+    background-color: cyan;
+}
+.logo {
+    max-height:1em;
+    border: none;
+}
+img {
+    max-height:100%;
+    max-width:100%;
+    border: solid;
+    border-radius: 5px;
+}
+body {
+    background-color: #7986ac;
+}
+button{
+    font-size: 1.5em;
+    border-radius: 5px;
+    color: black;
+}
+ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    margin: 5px;
+    border-radius: 5px;
+    border-width: .15em;
+    float: right;
+    padding: 8px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-style: oblique;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3em;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="pests.css">
+    </head>
+    <body>
+
+        <!-- header -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 head_section" style="height:auto;">
+                    <h1 class="banner" style="padding-top:2.6em;">MARIO PEST CONTROL</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- body of the webpage -->
+        <div class="container-fluid">
+
+            <!-- clickable images for counting -->
+            <div class="row bg-primary" style="height: auto; margin-bottom: 3em;">
+                <div class="col-sm-12">
+                    <div class="form-horizontal" style="height: auto;">  
+                        <div class="col-sm-12" style="margin-bottom: 3em;">
+                            <ul>
+                               <div class="col-sm-4">
+                                    <li>
+                                        <img src="http://vignette3.wikia.nocookie.net/fantendo/images/c/cd/Goomba_Looking.png/revision/latest?cb=20120731143323" onclick='addGoomba()'>
+                                        Goomba
+                                        <ul class="sublist">
+                                            <li id='goomba_caught'>Total caught: </li>
+                                            <li id='goomba_subcost'>Total subcost: </li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="col-sm-4">
+                                    <li><img src="http://www.mariowiki.com/images/thumb/1/16/Bob-ombMK8.png/200px-Bob-ombMK8.png" onclick='addBomb()'>
+                                        Bomb-omb
+                                        <ul class="sublist">
+                                            <li id='bomb_caught'>Total caught: </li>
+                                            <li id='bomb_subcost'>Total subcost: </li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="col-sm-4">
+                                    <li><img src="http://vignette1.wikia.nocookie.net/themariolevelenemies/images/3/3a/Nsmb-cheep-cheep-1-.jpg/revision/latest?cb=20110829203258" onclick='addCheep()'>
+                                        Cheep Cheep
+                                        <ul class="sublist">
+                                            <li id='cheep_caught'>Total caught: </li>
+                                            <li id='cheep_subcost'>Total subcost: </li>
+                                        </ul>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+
+                    </div> 
+                    <!-- area at bottom showing running totals -->
+                    <div class="row">
+                        <div class="col-sm-12 total_all" style="height:auto;">
+                            <div class="col-sm-6">
+                                <p id="total_caught">Total Caught</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p id="total_cost">Total Cost</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 total_all" style="height:70px;">
+                            <div class="col-sm-6">
+                                <p id="caught_display">0</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p id="cost_display">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 nav_row">
+                    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+                        <div class="container-fluid">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">mario.com</a></li>
+                                <li><a href="#">Mario Inc</a></li> 
+                                <li><a href="#">Mario Street</a></li> 
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <audio src="http://66.90.91.26/ost/super-mario-bros.-3/hwwdacwmsv/02-level-theme-1.mp3" autoplay>
+            <embed src="http://66.90.91.26/ost/super-mario-bros.-3/hwwdacwmsv/02-level-theme-1.mp3" width="180" height="90" hidden="true" />
+        <!-- where the script is imported -->
+        <script src="pests.js"></script>
+    </body>
+</html>

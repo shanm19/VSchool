@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <!-- Shan Miller 8/16/16 -->
+    <!-- The point of this project was to demonstrate how to implement inline styling and 
+    an external .css file concurrently. I do not actually condone the practice of inline styling -->
+    <head>
+        
+        <link rel="stylesheet" href="newsies.css">
+        <title>Ugly Papers</title>
+        
+    </head>
+    
+    <body>
+        
+        <header>
+            <h1 style="padding: .3em; font-size: 5em; text-align: center; background-color: #162656; color: #cacdd3; border-radius: 5px;">Ugly Papers<img class="logo" src="ugly_papers_logo.jpg"></h1>
+            <!-- added an image inside the header to be inside the background-color -->
+        </header>
+        
+        <ul>
+            <li><button>Home</button></li>
+            <li><button>News</button></li>
+            <li><button>Contact</button></li>
+            <li><button>About</button></li>
+        </ul>
+        <!-- admittedly, this should just be a <nav> tag, but I wanted to experiment
+            moving the <li> to be inline -->
+        
+        <h1 style="text-align: center; font-size: 3em;">The World Will Know</h1>
+        <div class="newspaper">
+            <p style="margin-top: 0px; text-indent: 4em;"><strong>Pulitzer</strong> and <strong>Hearst</strong> they think we're nothin'. Are we nothin'? No!</p>
+            <p>NO!</p>
+            <p>Pulitzer and Hearst they think they got us. Do they got us?</p>
+            <p>NO!</p>
+            <p>Even though we ain't got hats or badges, we're a union just by saying so. <i>And the world will know!</i></p>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+            <img src="http://www.richardjhinds.com/uploads/2/5/8/2/25827592/3006572_orig.jpg">
+        </div>
+        
+        <!-- each article is allocated into their individual <div> tags for consistency -->
+        
+        <br/><br/><br/>
+        
+        <h1 style="text-align: center; font-size: 2em;">Can't Stop The Feeling</h1>
+        <div class="newspaper">
+            
+            <p style="margin-top: 0px; text-indent: 4em;">I got this feeling inside my bones
+            It goes electric, wavey when I turn it on
+            All through my city, all through my home
+            We're flying up, no ceiling, when we're in our zone
+
+            I got that sunshine in my pocket
+            Got that good soul in my feet
+            I feel that hot blood in my body when it drops, ooh
+            I can't take my eyes up off it, moving so phenomenally
+            Room on lock the way we rock it, so don't stop
+
+            And under the lights when everything goes
+            Nowhere to hide when I'm getting you close
+            When we move, well, you already know
+            So just imagine, just imagine, just imagine
+            Nothing I can see but you when you dance, dance, dance
+            Feeling good, good, creeping up on you
+            So just dance, dance, dance, come on
+            All those things I shouldn't do
+            But you dance, dance, dance
+            And ain't nobody leaving soon, so keep dancing
+
+            I can't stop the feeling
+            So just dance, dance, dance
+            I can't stop the feeling
+            So just dance, dance, dance, come on
+
+            Ooh, it's something magical
+            It's in the air, it's in my blood, it's rushing on
+            Don't need no reason, don't need control
+            I fly so high, no ceiling, when I'm in my zone
+
+            'Cause I got that sunshine in my pocket
+            Got that good soul in my feet
+            I feel that hot blood in my body when it drops, ooh
+            I can't take my eyes up off it, moving so phenomenally
+            Room on lock the way we rock it, so don't stop
+
+            And under the lights when everything goes
+            Nowhere to hide when I'm getting you close
+            When we move, well, you already know
+            So just imagine, just imagine, just imagine
+            Nothing I can see but you when you dance, dance, dance
+            Feeling good, good, creeping up on you
+            So just dance, dance, dance, come on
+            All those things I shouldn't do
+            But you dance, dance, dance
+            And ain't nobody leaving soon, so keep dancing
+
+            I can't stop the feeling
+            So just dance, dance, dance
+            I can't stop the feeling
+            So just dance, dance, dance
+            I can't stop the feeling
+            So just dance, dance, dance
+            I can't stop the feeling
+            So keep dancing, come on
+
+            I can't stop the, I can't stop the
+            I can't stop the, I can't stop the
+            I can't stop the feeling
+
+            Nothing I can see but you when you dance, dance, dance
+            (I can't stop the feeling)
+            Feeling good, good, creeping up on you
+            So just dance, dance, dance, come on
+            (I can't stop the feeling)
+            All those things I shouldn't do
+            But you dance, dance, dance
+            (I can't stop the feeling)
+            And ain't nobody leaving soon, so keep dancing
+
+            Everybody sing
+            (I can't stop the feeling)
+            Got this feeling in my body
+            (I can't stop the feeling)
+            Got this feeling in my body
+            (I can't stop the feeling)
+            Wanna see you move your body
+            (I can't stop the feeling)
+            Got this feeling in my body
+            Break it down
+            Got this feeling in my body
+            Can't stop the feeling
+            Got this feeling in my body, come on</p>
+            <a href="https://www.youtube.com/watch?v=ru0K8uYEZWw"><i>Listen to JT now!</i></a>
+        </div>
+        
+        <br/><br/><br/>
+        
+        <h1 style="text-align: center; font-size: 2em;">Wherever I Go</h1>
+        <div class="newspaper">
+            <img src="http://www.billboard.com/files/media/ryan-tedder-billboard10-650a.jpg">  
+            <p style="margin-top: 0px; text-indent: 4em;">I know I could lie but I’m telling the truth
+            Wherever I go there’s a shadow of you
+            I know I could try looking for something new
+            But wherever I go, I'll be looking for you
+
+            Some people lie but they're looking for magic
+            Others are quietly going insane
+            I feel alive when I’m close to the madness
+            No easy love could ever make me feel the same
+
+            I know I could lie, but I won't lie to you
+            Wherever I go, you're the ghost in the room
+            I don't even try looking for something new
+            Cause wherever I go, I'll be looking for you
+
+            Some people try but they can't find the magic
+            Others get down on their knees and they pray
+            I come alive when I’m close to the madness
+            No easy love could ever make me feel the same
+            Make me feel the same
+            Make me feel the same, same, same
+
+            I know I could lie but I’m telling the truth
+            Wherever I go there’s a shadow of you
+            I know I could try looking for something new
+            But wherever I go, I'll be looking for you
+            Wherever I go, I'll be looking for you, you
+
+            Some people pray to their God for some magic
+            Cause no easy love could ever make them feel the same
+            No easy love could ever make me feel the same
+            Make me feel the same, same, same
+
+            I know I could lie but I’m telling the truth
+            Wherever I go there’s a shadow of you
+            I know I could try looking for something new
+            But wherever I go, I'll be looking for you
+
+            You think it's a lie when I'm telling the truth
+            Wherever I go, I'll be looking for you
+            Wherever I go, I'll be looking for you
+            Looking for you, looking for you, ah</p>
+        </div>
+        
+    </body>
+    
+</html>

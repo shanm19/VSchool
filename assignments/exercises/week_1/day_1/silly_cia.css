@@ -1,0 +1,31 @@
+h1 {
+    color: darkgreen;
+    font: "Georgia";
+    text-align: center;
+}
+
+h3 {
+    font: "Georgia";
+    text-align: center;
+}
+
+p{
+    font: 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.also{
+    text-transform: uppercase;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+img{
+    float: left;
+    margin-right: 20px;
+}

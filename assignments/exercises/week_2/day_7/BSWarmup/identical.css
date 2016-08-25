@@ -1,0 +1,47 @@
+.my-nav{
+    background-color: #2c3e50;
+    border-radius: 0;
+    font-family: "verdana";
+    margin: 0;
+    padding: .4em;
+}
+.navbar .nav > li > a{
+    color: white;
+    font-size: .7em;
+}
+.img-responsive{
+    margin: 0 auto;
+    margin-top: 5em;
+    margin-bottom: 1em;
+}
+.content{
+    background-color: #18bc9c;
+    text-align: center;
+    color: white;
+}
+hr{
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin: 8px auto;
+    height: 0;
+    width: 22em;
+    max-height: 0;
+    font-size: 5px;
+    line-height: 0;
+    clear: both;
+    border: solid white;
+}  
+.navbar-left{
+    margin-left: 15%;
+}
+.navbar-right{
+    margin-right: 15%;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-left {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}

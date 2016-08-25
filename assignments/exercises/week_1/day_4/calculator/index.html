@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="calculator.css">
+    </head>
+    <body>
+
+        <!-- header section -->
+
+        <div class="container-fluid top_part">
+            <div class="row">
+                <div class="col-sm-12 page-header">
+                    <h1 class="calc_title">calculator</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- calculator section -->
+
+        <div class="container">
+            <!-- first function -->
+            <div class="row ">
+                <div class="col-sm-12 form-all">
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control centered" id="add1">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="add2">
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-primary" onclick="add()">Add</button>
+                    </div>
+                    <div class="col-sm-3" class="all_output" id="output1"></div>
+                </div>
+            </div>
+            <!-- second function -->
+            <div class="row">
+                <div class="col-sm-12 form-all">
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="subtract1">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="subtract2">
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-primary" onclick="subtract()">Subtract</button>
+                    </div>
+                    <div class="col-sm-3" class="all_output" id="output2"></div>
+                </div>
+            </div>
+            <!-- third function -->
+            <div class="row">
+                <div class="col-sm-12 form-all">
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="multiply1">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="multiply2">
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-primary" onclick="multiply()">Multiply</button>
+                    </div>
+                    <div class="col-sm-3" class="all_output" id="output3"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="calculator.js"></script>
+
+    </body>
+</html>
