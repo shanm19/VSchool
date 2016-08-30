@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="pests.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+    <body>
+
+       <div class="container-fluid">
+           <div class="row">
+               <div id="toggleHead" class="col-sm-12 head_section">
+                   <h1 class="text-center pest_title">MARIO PEST CONTROL</h1>
+                </div>
+           </div>
+       </div>
+       <br>
+       <div class="container">
+           <div class="row">
+               <div class="col-sm-4 well">
+                   <img class="img-responsive" id="goomba_image" src="http://vignette3.wikia.nocookie.net/fantendo/images/c/cd/Goomba_Looking.png/revision/latest?cb=20120731143323">
+                   <h2>Goomba</h2>
+                   <h3 class="fa_change"><i id="minus_goomba" class="fa fa-minus"></i>   <i id="plus_goomba" class="fa fa-plus"></i></h3>
+                   <h3 id="goomba_caught">Caught: </h3>
+                   <h3 id="goomba_subcost">Cost: </h3>
+               </div>
+               <div class="col-sm-4 well">
+                   <img class="img-responsive" id="bomb_image" src="http://www.mariowiki.com/images/thumb/1/16/Bob-ombMK8.png/200px-Bob-ombMK8.png">
+                   <h2>Bomb-omb</h2>
+                   <h3 class="fa_change"><i id="minus_bomb" class="fa fa-minus"></i>   <i id="plus_bomb" class="fa fa-plus"></i></h3>
+                   <h3 id="bomb_caught">Caught: </h3>
+                   <h3 id="bomb_subcost">Cost: </h3>
+               </div>
+               <div class="col-sm-4 well">
+                   <img class="img-responsive" id="cheep_image" src="http://vignette2.wikia.nocookie.net/fantendo/images/4/46/Cheep-Cheep_cool.png/revision/latest?cb=20111118123743">
+                   <h2>Cheep Cheep</h2>
+                   <h3 class="fa_change"><i id="minus_cheep" class="fa fa-minus"></i>   <i id="plus_cheep" class="fa fa-plus"></i></h3>
+                   <h3 id="cheep_caught">Caught: </h3>
+                   <h3 id="cheep_subcost">Cost: </h3>
+               </div>
+           </div>
+           <div class="row text-center">
+               <div class="col-sm-6">
+                   <h1 id="caught_display">Total Baddies: </h1>
+               </div>
+               <div class="col-sm-6">
+                   <h1 id="cost_display">Total Cost: </h1>
+               </div>
+           </div>
+           <br>
+           <div class="row">
+               <div class="col-sm-12 text-center">
+                   <div id="toggle" class="btn btn-lg btn-info">Night Mode</div>
+               </div>
+           </div>
+       </div>
+       <br><br>
+       
+        <audio class="coin">
+            <source src="http://themushroomkingdom.net/sounds/wav/smw/smw_coin.wav" type="audio/wav">
+        </audio>    
+       
+        <!-- where the script is imported -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="pests.js"></script>
+    </body>
+</html>

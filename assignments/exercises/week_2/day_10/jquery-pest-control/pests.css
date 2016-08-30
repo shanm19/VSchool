@@ -1,0 +1,77 @@
+body{
+    font-family: "Super Mario 256";
+}
+.head_section
+{
+    background-image: url('http://www.f-covers.com/cover/super-mario-galaxy-2-mario-yoshi-facebook-cover-timeline-banner-for-fb.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 35vw;
+}
+
+.pest_title{
+    font-size: 7vw;
+    color: white;
+    text-shadow: 5px 5px 5px #555;
+    text-align: center;
+    position: relative;
+    top: 25vw;
+    color: yellow;
+}
+.well{
+    box-shadow: 6px 3px 5px 2px #555;
+    width: 28%;
+    margin: 2vw;
+    background-color: yellow;
+    padding: none;
+}
+.well img{
+    height: 20vw;
+    
+}
+.well h2{
+    text-align: center;
+    font-size: 230%;
+    color: red;
+    text-shadow: 5px 5px 5px #555;
+    padding: none;
+}
+.img-responsive{
+    margin: 0 auto;
+}
+.fa_change{
+    text-align: center;
+}
+#toggle{
+    font-size: 3em;
+    color: black;
+}
+@media screen and (max-width: 768px){
+    .well{
+        width: 70vw;
+        margin: auto;
+        margin-bottom: 5vw;
+    }
+    .well h2{
+        font-size: 7vw;
+    }
+}
+
+/*active button section*/
+.activeBody{
+    background-color: #555;
+    color: lightgray;
+}
+.activeWell{
+    background-color: gold;
+    color: black;
+}
+.activeTitle{
+    color: gold;
+}
+.activeToggle{
+    color: white;
+}
+.activeBanner{
+    background-image: none;
+}

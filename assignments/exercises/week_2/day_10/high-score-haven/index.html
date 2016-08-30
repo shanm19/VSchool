@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="haven.css">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row img-responsive background">
+                <div class="col-sm-12 text-center header">
+                    <h1>HIGH SCORE HAVEN</h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid">
+           <div class="row">
+               <div class="col-sm-12">
+                   <h1>ENTER YOUR HIGH SCORES RIGHT HERE</h1>
+               </div>
+           </div>
+            <form>
+                <input type="text" name="name" id="name" placeholder="Enter your name" class="col-sm-4 left input" required/>
+                <input type="text" name="game" id="game" placeholder="Name of the game" class="col-sm-4 input" required/>
+                <input type="date" name="date" id="date" placeholder="The date?" class="col-sm-4 input" required/>
+                <input type="number" name="score" id="score" placeholder="Enter your score" class="col-sm-4 input" required/>
+                <div class="col-sm-12 checky"><input type="checkbox" name="trashTalk" id="trash"/><label> Include trash talk?</label></div>
+                <input id="submit" type="submit" value="SUBMIT" class="col-sm-12 submit"/> 
+            </form>
+        </div>
+
+        <div class="container-fluid">
+            <table class="table">
+                <tr class="row">
+                    <th class="col-sm-4 left">NAME</th>
+                    <th class="col-sm-4">GAME</th>
+                    <th class="col-sm-4">DATE</th>
+                    <th class="col-sm-4">SCORE</th>
+                </tr>
+            </table>
+
+        </div>
+        
+        <br><br><br><br>
+        <div class="container">
+            <div class="row">
+                <button id="pokemon" class="col-sm-12 submit">Call for a Rando Pokemon</button>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="haven.js"></script>
+    </body>
+</html>
