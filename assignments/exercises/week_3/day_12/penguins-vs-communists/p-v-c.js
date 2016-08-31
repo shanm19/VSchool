@@ -52,24 +52,29 @@ function game(){
     var coin = Math.floor((Math.random() * 2) + 1);
     (coin == 2) ? teamSwitch = false : teamSwitch = true;
     
-    while(teamPenguin.population > 0 && teamCommunist.population > 0){ 
-        
-        if(teamSwitch){
-            sendNuke(teamPenguin, onHit, onMiss, teamCommunist);
-            teamSwitch = false;
+    var time = setInterval(function(){
+        if(teamPenguin.population > 0 && teamCommunist.population > 0){ 
+
+            if(teamSwitch){
+                sendNuke(teamPenguin, onHit, onMiss, teamCommunist);
+                teamSwitch = false;
+            }else{
+                sendNuke(teamCommunist, onHit, onMiss, teamPenguin);
+                teamSwitch = true;
+            }
+
+            progress(teamPenguin, teamCommunist);
+            
         }else{
-            sendNuke(teamCommunist, onHit, onMiss, teamPenguin);
-            teamSwitch = true;
+            if(teamPenguin.population <= 0){
+                console.log("Team Penguin lost and the Commies still have " + teamCommunist.population + " members");
+            }else{
+                console.log("Team Communist bit the bullet and the Penguins still have " + teamPenguin.population + " members");
+            }
+            clearInterval(time);
         }
         
-        progress(teamPenguin, teamCommunist);
-        
-    }
-    if(teamPenguin.population <= 0){
-        console.log("Team Penguin lost and the Commies still have " + teamCommunist.population + " members");
-    }else{
-        console.log("Team Communist bit the bullet and the Penguins still have " + teamPenguin.population + " members");
-    }
+    }, 1500);
     
 }
 

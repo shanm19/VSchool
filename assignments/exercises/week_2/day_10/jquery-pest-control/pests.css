@@ -17,6 +17,7 @@ body{
     position: relative;
     top: 25vw;
     color: yellow;
+    transition: all .5s ease-in-out,
 }
 .well{
     box-shadow: 6px 3px 5px 2px #555;
@@ -27,7 +28,7 @@ body{
 }
 .well img{
     height: 20vw;
-    
+    transition: all .3s ease-in-out;
 }
 .well h2{
     text-align: center;
@@ -74,4 +75,11 @@ body{
 }
 .activeBanner{
     background-image: none;
+}
+/* tacky transitions */
+img:hover{
+    height: 22vw;
+}
+.pest_title:active{
+     color: lightblue;
 }
