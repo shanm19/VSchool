@@ -26,7 +26,3 @@ function gen_info(response){
 
 var button = document.getElementById("button");
 button.addEventListener("click", parsePokemon);
-
-//document.getElementById("insert").innerHTML = "hey";
-
-//parsePokemon();

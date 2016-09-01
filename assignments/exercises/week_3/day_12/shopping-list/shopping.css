@@ -10,22 +10,25 @@ body{
 }
 
 .fa-minus{
-    font-size: 3vw; 
-    margin-left: 4vh;
-    margin-top: 6vh;
+    float: left;
+    margin-right: 1em;
+    margin-left: 2em;
     transition: all .5s ease;
+    position: relative;
+    top: 10px;
 }
 .fa-minus:hover{
     color: red;
 }
 .item_added h3{
-    font-size: 9vw;
+    display: inline;
+    font-size: 3em;
     transition: all .5s ease;
 }
 
 .item_added h3:hover{
     color: #304375;
-    font-size: 12vw;
+    font-size: 5em;
 }
 
 .fa-shopping-cart{
