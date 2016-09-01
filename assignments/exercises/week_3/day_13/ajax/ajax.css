@@ -1,5 +1,6 @@
 body {
     font-family: 'Sigmar One', cursive;
+    background-color: #55AA55;
 }
 
 .title {
@@ -7,29 +8,47 @@ body {
     margin-bottom: 1em;
 }
 
+
+/* button formatting */
+
 .btn-format {
     margin-top: 1em;
     font-size: 2em;
-    color: gray;
+    color: #555;
     text-shadow: 2px 2px 2px white;
     box-shadow: 2px 2px 2px black;
     width: 5em;
 }
 
 .btn-format:hover {
-    color: black;
+    color: #222;
 }
 
-.newItem{
+.newItem {
     font-size: 2em;
 }
-.img-responsive{
+
+
+/* image response */
+
+.img-responsive {
     max-width: 100px;
     margin: 0 auto;
     border-radius: 3px;
-    border: solid black 1px;
-    box-shadow: 3px 3px 3px #555;
+    border: solid #222 1px;
+    box-shadow: 1px 1px 1px white;
 }
+
+img {
+    transition: all .5s ease;
+}
+
+img:hover {
+    max-width: 200px;
+}
+
+
+/* maintain the form columns inline with each other */
 
 @media screen and (max-width: 768px) {
     .form-control {

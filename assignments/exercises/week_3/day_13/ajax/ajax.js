@@ -4,30 +4,34 @@ $(document).ready(function () {
 
     $("#post").click(function () {
 
-        if($('#titleInput').val()){
+        if ($('#titleInput').val()) {
+
             var object = {
                 title: $('#titleInput').val(), // this one is the only thing that is actually required
                 description: $('#descriptionInput').val(),
-                price: $('#priceInput').val(), // Must be a number of some kind (integer or float)
+                price: $('#priceInput').val(), 
                 imgUrl: $('#urlInput').val(),
                 completed: false // must be a boolean (true or false). If nothing provided, defaults
 
             };
 
             $.post(url, object,
-                   function (data, status) {
-                alert("Data: " + data + "\nStatus: " + status);
-            });
-        }else{
+                function (data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+            $('#titleInput').val('');
+            $('#descriptionInput').val('');
+            $('#priceInput').val('');
+            $('imgUrl').val('');
+        } else {
             alert("You at least need a title!");
         }
-        
-        
+
+
     });
 
     $("#get").click(function () {
         $.get(url, function (response) {
-            //alert(response[0].title);
             print(response);
         });
     });
@@ -44,11 +48,11 @@ $(document).ready(function () {
 
         }
     }
-    
-    $('.getAdd').on("click", "input", function(){
-        if($(this).is(':checked')){
+
+    $('.getAdd').on("click", "input", function () {
+        if ($(this).is(':checked')) {
             $(this).next().css('textDecoration', 'line-through');
-        }else{
+        } else {
             $(this).next().css('textDecoration', 'none');
         }
     });
