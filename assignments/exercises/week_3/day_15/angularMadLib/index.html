@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="madLib.css">
+
+</head>
+
+<body class="text-center" ng-controller="MainController">
+
+    <div class="container-fluid header">
+        <div class="row">
+            <div class="col-xs-12 title">
+                <h1>MADLIBZ</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- User input section -->
+    <div class="container well">
+        <div class="input-group">
+            <span class="input-group-addon wordType" id="basic-addon3">{{proxy.type}}</span>
+            <input type="text" class="form-control" id="allInput" ng-model="proxy.value">
+
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-lg btn-info myBtn" ng-click="submit();">SUBMIT!</button>
+            </div>
+        </div>
+        <!-- hidden until 10 inputs received, this is the response -->
+        <div id="hideText" class="row" ng-show="display">
+            <div class="col-xs-12">
+                <p>A <sup>1</sup>{{allInput[0].value}}, <sup>2</sup>{{allInput[1].value}} man went to the <sup>3</sup>{{allInput[2].value}} to do some <sup>4</sup>{{allInput[3].value}}. He died when he saw his <sup>5</sup>{{allInput[4].value}} standing there, holding his <sup>6</sup>{{allInput[5].value}}. "Whoa," he exclaimed, "My <sup>7</sup>{{allInput[6].value}} will hate your <sup>8</sup>{{allInput[7].value}}, <sup>9</sup>{{allInput[8].value}} <sup>10</sup>{{allInput[9].value}}!"</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+

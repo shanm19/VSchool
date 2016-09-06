@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ToDoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body ng-controller="MainController" style="text-align: center;">
+
+    <h1>Yet another to do app</h1>
+    
+    <label for="taskInput">New to-do: </label>
+    <input id="taskInput" type="text" placeholder="Enter a task" ng-model="newTask">
+    <button ng-click="addTask()">Submit</button>
+
+    <div id="toDoList" ng-repeat="task in tasks track by $index">
+        <hr>
+        <h4>{{ task }}</h4>
+        <button ng-click="deleteTask($index)">DONE</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+
+</html>

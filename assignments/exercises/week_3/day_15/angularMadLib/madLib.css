@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'ADLIB';
+    src: url('ADLIB.ttf'); 
+}
+
+body{
+    font-family: 'ADLIB';
+    background-color: #609795;
+}
+.header{
+    height: 10em;
+    margin-bottom: 1em;
+}
+.title h1{
+    font-size: 6em;
+    text-shadow: 3px 3px 3px #999;
+}
+
+.row{
+    margin-bottom: 2em;
+}
+.row .col-xs-3 input{
+    border-radius: 3px;
+}
+
+.myBtn{
+    font-size: 2em;
+    box-shadow: 2px 2px 2px #999;
+    text-shadow: 2px 2px 2px #000;
+}
+
+p{
+    font-size: 1.5em;
+}
+.well{
+    background-color: #7081A6;
+}
+.wordType{
+    background-color: white;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Name Badge</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+    <link rel="stylesheet" href="nameBadge.css">
+
+</head>
+
+<body ng-controller="MainController">
+    
+    <!-- input section -->
+    <div class="container well">
+        <div class="row">
+            <div class="col-xs-6">
+                <input class="form-control" type="text" placeholder="First Name" ng-model="firstName">
+            </div>
+            <div class="col-xs-6">
+                <input class="form-control" type="text" placeholder="Last Name" ng-model="lastName">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <input class="form-control" type="email" placeholder="Email" ng-model="email">
+            </div>
+            <div class="col-xs-6">
+                <input class="form-control" type="text" placeholder="Place of Birth" ng-model="birthPlace">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <input class="form-control" type="text" placeholder="Number eg. 1112223333" ng-model="phone">
+            </div>
+            <div class="col-xs-6">
+                <input class="form-control" type="text" placeholder="Favorite Food" ng-model="food">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <textarea name="about" id="about" cols="65" rows="6" placeholder="Tell us about yourself" ng-model="about"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <button class="btn btn-lg btn-success myBtn" ng-click="submit()" ng-disabled="!firstName || !lastName || !email || !birthPlace || !phone || !food || !about">Submit</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- template for each new employee badge -->
+    <div class="container well wellTwo" ng-repeat="employee in employees">
+       <div class="row badgeHead">
+           <div class="col-xs-12 badgeTitle">
+               <p>Badge:</p>
+           </div>
+       </div>
+        <div class="row">
+            <div class="col-xs-6 leftPad">
+                <p>Name: {{employee.firstName}} {{employee.lastName}}</p>
+            </div>
+            <div class="col-xs-6 rightPad">
+                <p>Phone: {{employee.phone}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 leftPad">
+                <p>Place of Birth: {{employee.birthPlace}}</p>
+            </div>
+            <div class="col-xs-6 rightPad">
+                <p>Favorite food: {{employee.food}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 leftPad">
+                <p>Email: {{employee.email}}</p>
+            </div>
+            <div class="col-xs-6 rightPad"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 leftPad rightPad aboutOut">
+                <p>{{employee.about}}</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

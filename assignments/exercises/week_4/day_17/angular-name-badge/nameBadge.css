@@ -1,0 +1,70 @@
+body{
+    font-family: 'Merriweather';
+    font-size: 1.5em;
+}
+.row{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+textarea{
+    width: 100%;
+    padding: .5em;
+}
+.well{
+    background-color: #505F90;
+    padding-right: 6em;
+    padding-left: 6em;
+    border: solid 2px #555;
+}
+.wellTwo{
+    background-color: white;
+    border: solid 2px #555;
+    padding: 0;
+}
+.myBtn{
+    font-size: 2em;
+    text-shadow: 2px 2px 2px #555;
+    box-shadow: 2px 2px 2px #555;
+}
+.badgeHead{
+    background-color: limegreen;
+    margin: 0;
+    width: 100%;
+}
+.leftPad{
+    padding-left: 6em;
+}
+.rightPad{
+    padding-right: 6em;
+}
+.badgeTitle{
+    padding-top: .5em;
+    color: white;
+}
+.aboutOut p{
+    border: solid 2px #666;
+    height: auto;
+    padding: .5em;
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        margin: 0;
+    }
+    [class*="col-"] {
+        margin-top: .5em;
+        margin-bottom: .5em;
+        width: 100%;
+    }
+    .well{
+        padding: 0;
+    }
+    .leftPad{
+        padding-left: 1em;
+    }
+    .rightPad{
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    
+} 

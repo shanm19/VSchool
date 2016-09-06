@@ -9,27 +9,32 @@ $(document).ready(function () {
             var object = {
                 title: $('#titleInput').val(), // this one is the only thing that is actually required
                 description: $('#descriptionInput').val(),
-                price: $('#priceInput').val(), 
+                price: $('#priceInput').val(),
                 imgUrl: $('#urlInput').val(),
-                completed: false // must be a boolean (true or false). If nothing provided, defaults
+                completed: false
 
             };
 
+            //adds the new object to the API
             $.post(url, object,
                 function (data, status) {
                     alert("Data: " + data + "\nStatus: " + status);
                 });
+            //clean out the input fields
             $('#titleInput').val('');
             $('#descriptionInput').val('');
             $('#priceInput').val('');
             $('imgUrl').val('');
+
         } else {
+            //require at least a title before posting
             alert("You at least need a title!");
         }
 
 
     });
 
+    //retrieves the data from the API
     $("#get").click(function () {
         $.get(url, function (response) {
             print(response);
@@ -37,7 +42,7 @@ $(document).ready(function () {
     });
 
     function print(data) {
-
+        //if there is an img attached to the object it will attach it in a separate column
         for (var i = 0; i < data.length; i++) {
             if (data[i].imgUrl) {
                 //&emsp; tab
@@ -49,6 +54,7 @@ $(document).ready(function () {
         }
     }
 
+    //this will strike out and remove it on the checkbox click
     $('.getAdd').on("click", "input", function () {
         if ($(this).is(':checked')) {
             $(this).next().css('textDecoration', 'line-through');
