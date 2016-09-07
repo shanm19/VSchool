@@ -1,0 +1,31 @@
+body{
+    font-family: 'Permanent Marker', cursive;
+    background-color: #eee;
+}
+.jumbotron{
+    background-color: #333;
+    color: crimson;
+    text-shadow: 3px 3px 3px #555;
+}
+.hitImageContainer{
+    width: 300px; 
+    height: 300px; 
+    overflow: hidden;
+    margin-top: 10em;
+}
+.hitImage{
+    min-width: 250px;
+    min-height: 300px;
+    max-height: 320px;
+    display: block;
+    margin: auto;
+    position: relative;
+    right: 70px;
+}
+.hitName{
+    position: absolute;
+    left: 15px;
+    background-color: crimson;
+    width: 300px;
+    opacity: .9;
+}
