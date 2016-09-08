@@ -4,7 +4,11 @@ function firstRepeat(str) {
 
     // adds key to letters if it doesn't exist, otherwise it increments
     for (var i = 0; i < str.length; i++) {
-        (letters.hasOwnProperty(str[i])) ? letters[str[i]]++ : letters[str[i]] = 1;
+        if(letters.hasOwnProperty(str[i])){
+            letters[str[i]]++;
+        }else{
+            letters[str[i]] = 1;
+        }
     }
 
     // finds first letter in letters that is less than 1
