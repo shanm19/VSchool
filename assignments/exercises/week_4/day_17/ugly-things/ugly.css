@@ -1,0 +1,68 @@
+body{
+    font-family: 'Shadows Into Light Two', cursive;
+}
+.banner{
+    width: 100%;
+    background-repeat: none;
+    border-bottom: solid 1px #555;
+}
+.title{
+    font-size: 9vw;
+    font-weight: 900;
+    color: #ddd;
+    text-shadow: 3px 3px 3px #555;
+    position: absolute;
+    width: 100%;
+}
+.inputArea{
+    background-color: #C3DEDF;
+    padding-bottom: 5em;
+}
+.input{
+    height: 3em;
+    margin-top: 3em;
+}
+.myBtn{
+    font-size: 3em;
+    margin: 2em;
+    text-shadow: 3px 3px 3px #555;
+    box-shadow: 3px 3px 3px #555;
+}
+.submissionPic{
+    max-height: 200px;
+    max-width: 100%;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px;
+}
+.picContainer{
+    height: 250px;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+.commentBtn{
+    margin-top: 1em;
+    height: 100%;
+}
+.deletePic{
+    position: absolute;
+    
+}
+.commentList{
+    margin-left: 1em;
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+.col-sm-4{
+    margin-top: 4em;
+}
+.removeComment{
+    margin-right: 1em;
+}

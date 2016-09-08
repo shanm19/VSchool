@@ -1,0 +1,73 @@
+body{
+    font-family: 'Covered By Your Grace', cursive;
+}
+
+.header h1{
+    font-size: 14vw;
+    position: relative;
+    top: -20px;
+    text-shadow: 3px 3px 3px #888;
+}
+
+.headerDivide{
+    height: 50px;
+    background-color: #333;
+}
+.myInput{
+    margin: 1em;
+}
+.relativeRow{
+    position: relative;
+}
+.myPanel{
+    padding: 1em;
+}
+.myBtn{
+    font-size: 2em;
+    width: 70%;
+    position: absolute;
+    right: 15%;
+    
+    text-shadow: 3px 3px 3px #888;
+    box-shadow: 3px 3px 3px #888;
+}
+.myOutput{
+    position: relative;
+}
+.myCheckbox{
+    position: absolute;
+    top: 25px;
+    left: 50%;
+}
+.myImg{
+    max-height: 100px;
+    border-radius: 4px;
+    float: right;
+}
+.rowContainer{
+    height: auto;
+    padding: 1em;
+    border: solid 1px #555;
+    border-radius: 4px;
+    position: relative;
+}
+.description h3{
+    margin-top: 0;
+}
+.strikeThrough{
+    text-decoration: line-through;
+    color: red;
+}
+.myWarningBtn{
+    position: relative;
+    left: 45%;
+}
+.myDangerBtn{
+    position: relative;
+    left: 49%;
+}
+.mySaveChanges{
+    margin-top: 1em;
+    text-shadow: 3px 3px 3px #888;
+    box-shadow: 3px 3px 3px #888;
+}

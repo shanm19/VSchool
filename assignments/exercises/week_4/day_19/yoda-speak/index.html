@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+</head>
+<body ng-controller="MainController">
+   
+   <div class="container-fluid">
+       <div class="row">
+           <div class="col-xs-6 text-center">
+               <h1>Yoda Speak</h1>
+               <input type="text" class="form-control" ng-model="input">
+               <button class="btn btn-lg btn-success" ng-click="translate()">Translate</button>
+           </div>
+           <div class="col-xs-6 text-center" ng-if="display">
+               <h1>{{output}}</h1>
+           </div>
+       </div>
+   </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+
+    <link rel="stylesheet" href="ugly.css">
+
+</head>
+
+<body ng-controller="MainController">
+
+    <!-- header section -->
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="title text-center">What do you think is ugly?</h1>
+            <img src="http://www.f-covers.com/cover/green-zelda-meme-facebook-cover-timeline-banner-for-fb.jpg" class="img-reponsive banner">
+        </div>
+    </div>
+
+    <div class="container-fluid inputArea">
+        <!-- input row -->
+        <div class="row">
+            <div class="col-sm-4">
+                <input name="title" class="form-control input" type="text" placeholder="Title" ng-model="title">
+            </div>
+            <div class="col-sm-4">
+                <input name="url" class="form-control input" type="text" placeholder="img Url" ng-model="url">
+            </div>
+            <div class="col-sm-4">
+                <input name="description" class="form-control input" type="text" placeholder="Description" ng-model="description">
+            </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <button class="btn btn-lg btn-success myBtn" ng-click="submit()" ng-disabled="!title || !url || !description">Submit</button>
+            </div>
+        </div>
+
+        <!-- submission loop -->
+        <div class="row text-center">
+
+            <div class="col-sm-4" ng-repeat="submit in submits track by $index">
+                
+                <!-- where the image for each post is shown -->
+                <div class="picContainer">
+                    <button type="button" class="btn btn-danger btn-circle deletePic" ng-click="deleteAll($index)"><i class="glyphicon glyphicon-remove"></i></button>
+                    <img class="submissionPic" src="{{submit.url}}">
+                </div>
+
+                <h1>{{submit.title}}</h1>
+                <h4>{{submit.description}}</h4>
+
+               <!-- add a comment section -->
+                <span>
+                
+                <input name="comment" class="form-control addComment" type="text" placeholder="Comment here" ng-model="submit.comment">
+                
+                <button class="btn btn-success commentBtn" ng-click="addComment($index, submit.comment)">Comment</button>
+                
+                </span>
+
+               <!-- loop to display all current comments -->
+                <div ng-repeat="comment in submit.comments track by $index">
+                    <p class="text-left commentList"><span><button class="btn btn-circle btn-danger removeComment" ng-click="removeComment($parent.$index, $index)"><i class="glyphicon glyphicon-remove"></i></button></span>{{comment}}</p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
