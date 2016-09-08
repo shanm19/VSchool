@@ -1,4 +1,5 @@
 var app = angular.module("MainApp", []).controller("MainController", ["$scope", "$http", function ($scope, $http) {
+    
     $scope.display = false;
     $scope.input = "";
     var baseUrl = "https://yoda.p.mashape.com/yoda?sentence=";
@@ -9,6 +10,7 @@ var app = angular.module("MainApp", []).controller("MainController", ["$scope", 
         }
     };
     
+    // GET Yoda translation with API key
     $scope.translate = function(){
         
         var fullUrl = baseUrl + $scope.input;
@@ -16,7 +18,7 @@ var app = angular.module("MainApp", []).controller("MainController", ["$scope", 
         $http.get(fullUrl, config).then(function(response){
             
             $scope.output = response.data;
-            console.log(response.data);
+            
             $scope.display = true;
         })
     }

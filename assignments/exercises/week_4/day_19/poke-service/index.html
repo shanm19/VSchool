@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body ng-controller="MainController">
+
+   <input type="text" placeholder="Enter a Pokemon" ng-model="newPokemon">
+   <button ng-click="addPokemon()">Submit!</button>
+    <div ng-repeat="pokemon in pokeList">
+        <button name="remove" ng-click="removePokemon(pokemon)">X</button>
+        <label for="remove">{{pokemon}}</label>
+   </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="services/pokeService.js"></script>
+</body>
+
+</html>

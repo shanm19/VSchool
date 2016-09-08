@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ServicesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+    <body ng-controller="MainController">
+   
+   <div>
+       <input type="text" ng-model="newStudent" placeholder="Name">
+       <button ng-click="addStudent()">Add Student</button>
+   </div>
+   <ul>
+       <li ng-repeat="person in classMembers">
+           <button ng-click="removeStudent(person)">X</button>{{person}}
+       </li>
+   </ul>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="services/classMemberService.js"></script>
+</body>
+</html>
