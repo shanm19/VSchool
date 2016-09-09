@@ -1,78 +1,45 @@
 var app = angular.module("MainApp", []);
 
-app.controller("MainController", ["$scope", "$http", function ($scope, $http) {
+app.controller("MainController", ["$scope", "ToDoService", function ($scope, ToDoService) {
 
-    var baseUrl = "http://mean.codingcamp.us/shan/todo/";
-
-    $scope.toDoList = [];
-    $scope.newToDo = {};
-
-    $scope.param = {
-        "title": "",
-        "description": "",
-        "price": "",
-        "imgUrl": ""
-    };
-
-    // GET function
-    $scope.getTodos = function () {
-        $http.get(baseUrl).then(function (response) {
-            $scope.toDoList = response.data;
-            $scope.toDoList.forEach(function (task) {
-                task.isBeingEdited = false;
-            })
-        })
-    }
-
-    $scope.getTodos();
-
-    // POST function
-    $scope.addToDo = function () {
-        var newTask = $scope.param;
-        //console.log(newTask);
-        $http.post(baseUrl, newTask).then(function (result) {
-
-            var newTask = result.data;
-            //alert(newTask.title);
-            newTask.isBeingEdited = false;
-            $scope.toDoList.push(newTask);
-            //console.log($scope.toDoList);
-            //console.log(newTask);
-            // clear input fields
-            $scope.param = {
-                "title": "",
-                "description": "",
-                "price": "",
-                "imgUrl": ""
-            };
-        })
-    }
-
-    // PUT function
-    $scope.updateToDo = function (index, t, d, p, i) {
-        //alert(t + d + p + i);
-        var newTask = {
-            "title": t,
-            "description": d,
-            "price": p,
-            "imgUrl": i
+    $scope.toDoList = ToDoService.toDoList;
+    
+    function clear(){
+        $scope.param = {
+            "title": "",
+            "description": "",
+            "price": "",
+            "imgUrl": ""
         };
-        var id = $scope.toDoList[index]._id;
-        $http.put(baseUrl + id, newTask).then(function (result) {
-
-            var updatedToDo = result.data;
-            task.isBeingEdited = false;
-            $scope.toDoList[index] = updatedToDo;
-            
+    }
+    
+    clear();
+    
+    //get
+    $scope.getTodos = function(){
+        ToDoService.getTodos().then(function(response){
+            $scope.toDoList = response;
         })
     }
-
-    // DELETE function
-    $scope.deleteToDo = function (taskId, index) {
-
-        $http.delete(baseUrl + taskId).then(function () {
-            $scope.toDoList.splice(index, 1);
+    
+    $scope.getTodos();
+    
+    //post
+    $scope.addToDo = function(){
+        ToDoService.addToDo($scope.param).then(function(){
+            clear();
         })
     }
+    
+    //put
+    $scope.updateToDo = function(index, t, d, p, i){
+        ToDoService.updateToDo(index, t, d, p, i);
+    }
+    
+    //delete
+    $scope.deleteToDo = function(taskId, index){
+        ToDoService.deleteToDo(taskId, index);
+    }
+    
 
 }]);
