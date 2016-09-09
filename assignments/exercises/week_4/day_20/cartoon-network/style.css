@@ -1,0 +1,55 @@
+body{
+    font-family: 'Freckle Face', cursive;
+    color: #356280;
+}
+.headSection{
+    background-color: #DFEAF2;
+}
+.placardSection{
+    background-color: #356280;
+}
+.title h1{
+    font-size: 11vw;
+    text-shadow: 4px 4px 4px #555;
+}
+.myBtn{
+    font-size: 3em;
+    box-shadow: 4px 4px 4px #555;
+    background-color: #356280;
+}
+.myInput{
+    height: 3em;
+    font-size: 1.5em;
+}
+hr{
+    height: 2px;
+    background-color: #555;
+}
+
+/* cartoon card section */
+.cartoonCard{
+    background-color: white;
+    box-shadow: 4px 4px 4px #555;
+    border-radius: 5px;
+    height: 450px;
+    overflow: hidden;
+    margin-bottom: 2em;
+    padding: .5em;
+    color: #222;
+}
+.cartoonCard h1{
+    font-size: 2.5em;
+}
+.cartoonCard img{
+    max-height: 250px;
+    max-width: 100%;
+}
+.cardCenter{
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .myInput{
+        margin-bottom: 1em;
+    }
+} 
