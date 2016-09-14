@@ -1,0 +1,34 @@
+<div class="container triviaCard">
+    <div class="row guessTheMovieRow" ng-if="!display">
+        <div class="col-xs-12 text-center">
+            <h1>Guess the Movie!</h1>
+            <p>How many clues do you need until you know the movie?</p>
+            <button class="btn btn-lg mySearchBtn" ng-click="play()">Start!</button>
+        </div>
+    </div>
+    
+    <div ng-if="display">
+       <div class="row">
+           <div class="col-xs-12 text-center">
+               <button class="btn btn-lg mySearchBtn" ng-click="nextHint()" ng-if="count <= 4">Next Hint</button>
+               <button class="btn btn-lg mySearchBtn" ng-click="nextHint()" ng-if="count >= 5">Make a Guess</button>
+           </div>
+       </div>
+       <div class="row guessRow" ng-if="count >= 5">
+           <br><br>
+           <input type="text" class="form-control" placeholder="Enter movie title here" ng-model="titleGuess">
+           <br>
+       </div>
+        <div class="row hintRow">
+            <div class="col-xs-12">
+                <h3 ng-if="count > 0">Director: <span class="hint">{{movie.Director}}</span></h3>
+                <h3 ng-if="count > 1">Genre: <span class="hint">{{movie.Genre}}</span></h3>
+                <h3 ng-if="count > 2">Year: <span class="hint">{{movie.Year}}</span></h3>
+                <h3 ng-if="count > 3">Actors: <span class="hint">{{movie.Actors}}</span></h3>
+                <h3 ng-if="count > 4">Plot: <span class="hint">{{movie.Plot}}</span></h3>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

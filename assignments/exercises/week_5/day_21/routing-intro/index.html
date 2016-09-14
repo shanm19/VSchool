@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="RoutingApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body ng-controller="MainController">
+
+    <nav>
+        <a>Bob the Builder</a>
+        <a href="#/">Home</a>
+        <a href="#/about">About</a>
+        <a href="#/prices">Prices</a>
+        <a href="#/contact">Contact</a>
+    </nav>
+    
+    <div ng-view></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="js/controllers/homeController.js"></script>
+    <script src="js/controllers/aboutController.js"></script>
+</body>
+
+</html>

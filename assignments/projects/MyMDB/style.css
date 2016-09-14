@@ -1,0 +1,158 @@
+/* all pages header */
+body{
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #555;
+    background-color: #ccc;
+}
+.header{
+    background: url("http://i1.wp.com/www.genesis-umc.org/web/wp-content/uploads/2015/01/Movie-Night-Website-Banner.jpg?resize=950%2C250") no-repeat center center;
+    background-size: cover;
+}
+.title h1{
+    font-family: 'Stalinist One', cursive;
+    font-size: 14vw;
+    background: linear-gradient(#ccc 10%, #16B1CE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .97;
+}
+.title h5{
+    color: #333;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 3px white;
+}
+.myNavbar{
+    border-radius: 0;
+}
+.navFont a{
+    color: #ccc !important;
+}
+.navFont a:hover{
+    color: #16B1CE !important;
+}
+.mySearch{
+    padding: 0;
+    width: 100%;
+}
+.myBrand{
+    font-family: 'Stalinist One';
+    color: #16B1CE !important;
+    font-size: 4em;/*2.5*/
+    background: linear-gradient(#ccc 10%, #16B1CE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 15%;
+}
+.mySearchBtn{
+    background-color: #16B1CE;
+    background: linear-gradient(#ccc, #16B1CE 100%);
+    border: none;
+    color: #333;
+}
+.mySearchBtn:hover{
+    background-color: #16B1CE;
+    background: linear-gradient(#16B1CE, #ccc 100%);
+    border: none;
+    color: #333;
+}
+.glyphicon-search{
+    font-size: 1.2em;
+    color: #555 !important;
+} 
+/* footer section */
+.footer{
+    background-color: #222;
+    color: #ccc;
+}
+.fa{
+    width: 1em;
+    height: 1em;
+    font-size: 1.5em;
+    margin: .1em;
+}
+.followRow{
+    padding-top: 0;
+}
+.otherSection{
+    padding-top: 1em;
+}
+.otherSection p{
+    margin: 0;
+}
+.otherSection p:hover{
+    color: #16B1CE;
+}
+.myBtn{
+    color: #ccc;
+}
+.fa-facebook:hover{
+    color: #496D89;
+}
+.fa-twitter:hover{
+    color: #00aced;
+}
+.fa-youtube-play:hover{
+    color: #e62117;
+}
+.fa-tumblr:hover{
+    color: #36465d;
+}
+.fa-google-plus:hover{
+    color: #dd4d40;
+}
+
+/* Home Page */
+.trailersRow{
+    background-color: #222;
+}
+.homeCard{
+    background-color: white;
+    box-shadow: 5px 5px 3px #555;
+    height: 1000px;
+}
+.slide{
+    padding: 0;
+}
+.myCarousel{
+    margin: 3vw;
+}
+
+/* guess the movie section */
+.triviaCard{
+    padding: 2em;
+    box-shadow: 5px 5px 3px #555;
+    background-color: #333;
+    height: 1000px;
+    color: #ccc;
+}
+.guessTheMovieRow{
+    color: #ccc;
+}
+.hint{
+    font-size: .6em;
+}
+
+/* search response section */
+.movieCard{
+    background-color: white;
+    box-shadow: 3px 3px 3px #555;
+    padding: 1em;
+}
+.titleRow h1{
+    font-size: 3em;
+    margin-top: 0;
+}
+.year{
+    font-size: .5em;
+}
+
+/* navbar resizing */
+@media screen and (max-width: 768px) {
+    .myBrand{
+        font-size: 4em;/*2.5*/
+        margin: 3.5%;
+    }
+    .titleRow h1{
+        margin-top: 1em;
+    }
+}

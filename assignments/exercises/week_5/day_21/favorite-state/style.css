@@ -1,0 +1,29 @@
+.title h1{
+    font-size: 13vw;
+    font-family: 'Finger Paint', cursive;
+    color: limegreen;
+    text-shadow: 3px 3px 3px #555;
+}
+.title h3{
+    font-size: 3vw;
+}
+.navbar{
+    border-radius: 0;
+}
+body{
+    font-family: 'Skranji', cursive;
+}
+
+.myImg{
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* whyIlove section */
+.whyiloveImg{
+    
+    border-radius: 30%;
+    border: solid 1px #ddd;
+    box-shadow: 3px 3px 3px #555;
+}

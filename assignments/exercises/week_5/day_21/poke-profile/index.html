@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body ng-controller="MainController">
+
+   <!-- Pokemon entry section -->
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col-xs-12 title">
+                <h1>Enter Pokemon Number</h1>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+           <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+                <input type="text" class="form-control input-lg myInput" placeholder="(The best ones are 1-151)" ng-model="pokeNumber">
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-lg btn-primary myBtn" ng-click="getPokemon()">Submit!</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pokemon output section -->
+    <div class="container text-center">
+       <br><br>
+        <div class="row">
+            <div class="col-xs-12 pokeName" ng-if="display">
+                <h1>{{newPokemon.name}}</h1>
+                <h3>Attack: {{newPokemon.attack}}</h3>
+                <h3>Abilities</h3>
+                <h4 ng-repeat="ability in newPokemon.abilities">{{ability.name}}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="{{sprite}}" class="sprite">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="services/pokeService.js"></script>
+</body>
+
+</html>
