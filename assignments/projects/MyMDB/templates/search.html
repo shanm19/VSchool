@@ -1,0 +1,33 @@
+<div class="container movieCard" ng-if="searchDisplay">
+
+    <div class="row posterRow">
+        <div class="col-sm-5 text-center">
+            <img src="images/inception.png">
+            <!--                <img src="response.Poster">-->
+        </div>
+        <div class="col-sm-7">
+            <div class="row titleRow">
+                <div class="col-xs-12">
+                    <h1>{{response.Title}} <span class="year">({{response.Year}})</span></h1>
+                </div>
+            </div>
+            <div class="row metaRow">
+                <div class="col-xs-12">
+                    <p>{{response.Rated}} | {{response.Runtime}} | {{response.Genre}} | {{response.Released}}</p>
+                </div>
+            </div>
+            <h5>IMDb: {{response.imdbRating}}/10</h5>
+            <h5>Metascore: {{response.Metascore}}</h5>
+            <h5>Rotten Tomatoes: {{response.tomatoMeter}}%</h5>
+        </div>
+    </div>
+    <br>
+    <div class="row otherData">
+        <div class="col-xs-12">
+            <p>{{response.Plot}}</p>
+            <p>Director(s): {{response.Director}}</p>
+            <p>Writer(s): {{response.Writer}}</p>
+            <p>Actors: {{response.Actors}}</p>
+        </div>
+    </div>
+</div>

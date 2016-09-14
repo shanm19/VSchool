@@ -4,6 +4,9 @@ app.controller("TriviaController", ["$scope", "SearchService", function($scope, 
     
     $scope.display = false;
     $scope.titleGuess = "";
+    $scope.winDisplay = false;
+    $scope.loseDisplay = false;
+    $scope.movie = {};
     
     var triviaArray = [
         "0111161",
@@ -34,6 +37,17 @@ app.controller("TriviaController", ["$scope", "SearchService", function($scope, 
     $scope.count = 0;
     $scope.nextHint = function(){
         $scope.count++;
+    }
+    
+    $scope.solveGame = function(){
+        console.log($scope.titleGuess);
+        if($scope.titleGuess === $scope.movie.Title){
+            $scope.winDisplay = true;
+            $scope.display = false;
+        }else{
+            $scope.loseDisplay = true;
+            $scope.display = false;
+        }
     }
     
 }]);

@@ -15,6 +15,10 @@ app.config(function($routeProvider){
         templateUrl: "./templates/trivia.html",
         controller: "TriviaController"
     })
+    .when("/search", {
+        templateUrl: "./templates/search.html",
+        controller: "SearchController"
+    })
     
 });
 //api key = f5d09d23

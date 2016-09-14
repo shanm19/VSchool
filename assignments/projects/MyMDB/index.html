@@ -57,7 +57,7 @@
                            <div class="input-group mySearch">
                                <input type="text" class="form-control" placeholder="Search" name="q" ng-model="searchInput">
                                <div class="input-group-addon mySearchBtn">
-                                   <span ng-click="search()"><i class="glyphicon glyphicon-search"></i></span>
+                                   <span ng-click="search()"><a href="#/search"><i class="glyphicon glyphicon-search"></i></a></span>
                                </div>
                            </div>
                        </form>
@@ -79,12 +79,13 @@
     <div ng-view ng-if="!searchDisplay"></div>
     
     <!-- if the user queries the database -->
+    
     <div class="container movieCard" ng-if="searchDisplay">
         
         <div class="row posterRow">
             <div class="col-sm-5 text-center">
                 <img src="images/inception.png">
-<!--                <img src="response.Poster">-->
+<!--                <img src="{{response.Poster}}">-->
             </div>
             <div class="col-sm-7">
                 <div class="row titleRow">
@@ -166,6 +167,7 @@
     <script src="js/controllers/homeController.js"></script>
     <script src="js/controllers/aboutController.js"></script>
     <script src="js/controllers/triviaController.js"></script>
+    <script src="js/controllers/searchController.js"></script>
     <script src="services/searchService.js"></script>
     <script src="services/carouselService.js"></script>
 </body>

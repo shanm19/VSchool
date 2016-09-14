@@ -7,11 +7,12 @@
         </div>
     </div>
     
-    <div ng-if="display">
+    <!-- game -->
+    <div ng-if="display  && !winDisplay && !loseDisplay">
        <div class="row">
            <div class="col-xs-12 text-center">
                <button class="btn btn-lg mySearchBtn" ng-click="nextHint()" ng-if="count <= 4">Next Hint</button>
-               <button class="btn btn-lg mySearchBtn" ng-click="nextHint()" ng-if="count >= 5">Make a Guess</button>
+               <button class="btn btn-lg mySearchBtn" ng-click="solveGame()" ng-if="count >= 5">Make a Guess</button>
            </div>
        </div>
        <div class="row guessRow" ng-if="count >= 5">
@@ -28,7 +29,19 @@
                 <h3 ng-if="count > 4">Plot: <span class="hint">{{movie.Plot}}</span></h3>
             </div>
         </div>
-        
+    </div>
+    
+    
+    <!-- results -->
+    
+    <!-- win -->
+    <div ng-if="winDisplay">
+        <h1>Win</h1>
+    </div>
+    
+    <!-- lose -->
+    <div ng-if="loseDisplay">
+        <h1>Lose</h1>
     </div>
     
 </div>
