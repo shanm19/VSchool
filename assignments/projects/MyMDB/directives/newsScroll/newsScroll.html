@@ -1,0 +1,6 @@
+<div class="text-left">
+    <h3>{{article.title}}</h3>
+    <h5>{{article.published | date : MM-dd-YYYY}} | {{article.author}}</h5>
+    <p>{{article.text | limitTo: 150}}(...)</p>
+    <p><a ng-href="{{article.url}}">More information</a></p>
+</div>

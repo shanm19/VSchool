@@ -7,9 +7,9 @@ app.config(function($routeProvider){
         templateUrl: "./templates/home.html",
         controller: "HomeController"
     })
-    .when("/about", {
-        templateUrl: "./templates/about.html",
-        controller: "AboutController"
+    .when("/showtimes", {
+        templateUrl: "./templates/showtimes.html",
+        controller: "ShowtimesController"
     })
     .when("/trivia", {
         templateUrl: "./templates/trivia.html",
@@ -23,22 +23,17 @@ app.config(function($routeProvider){
 });
 //api key = f5d09d23
 //example = http://img.omdbapi.com/?i=tt2294629&apikey=f5d09d23
-app.controller("MainController", ["$scope", "SearchService", function($scope, SearchService){
+app.controller("MainController", ["$scope", "$location", "SearchService", function($scope, $location, SearchService){
     
     $scope.searchInput = "";
-    $scope.searchDisplay = false;
     
-    //query a movie function
-    $scope.search = function(){
-        SearchService.search($scope.searchInput).then(function(response){
-            console.log(response);
-            $scope.response = response;
-            $scope.searchDisplay = true;
-        })
-    }
-    //replace the ng-view on page change after a query
-    $scope.displayOn = function(){
-        $scope.searchDisplay = false;
+    $scope.search = function(path){
+        //console.log($scope.searchInput);
+        if($scope.search != ""){
+            SearchService.search($scope.searchInput);
+            $location.path( path );
+            $scope.searchInput = "";
+        }
     }
     
 }]);

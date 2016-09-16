@@ -1,0 +1,22 @@
+<div class="container showtimesCard">
+   <div class="row">
+       <div class="col-sm-5">
+           <h1 style="font-size: 3vw; margin-top: 0;">Showtimes &amp; Tickets</h1>
+           <div class="input-group">
+               <input type="text" class="form-control" placeholder="Enter your zip code..." ng-model="zip">
+               <span class="input-group-btn">
+                   <button class="btn mySearchBtn" type="button" ng-click="findShowtimes()">Go!</button>
+               </span>
+           </div>
+       </div>
+   </div>
+   
+   <!-- showtimes results -->
+   <div ng-repeat="movieTitle in results">
+       <hr>
+       <movie-title-roll movie="movieTitle">
+           
+       </movie-title-roll>
+   </div>
+   
+</div>

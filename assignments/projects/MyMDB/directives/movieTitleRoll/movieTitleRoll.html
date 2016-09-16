@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h2><a href="movieTitle.officialUrl">{{movieTitle.title}}</a> <span style="font-size: .5em;">({{movieTitle.releaseDate | date : 'M/d/yyyy'}})</span></h2>
+<!--        <img ng-src="movieTitle.preferredImage.uri" href="movieTitle.officialUrl">-->
+        <p>{{movieTitle.runTime | runtime}} min | {{movieTitle.ratings[0].code}}</p>
+        <p>Plot: {{movieTitle.shortDescription}}</p>
+        <p>Top Cast: <span ng-repeat="actor in movieTitle.topCast">{{actor}} </span></p>
+        <p>Showtimes</p>
+        <p ng-repeat="(key, value) in movieTitle.theatreShowings track by $index">{{value.theater}} | <span ng-repeat="showings in value.showtimes track by $index"> <a href="{{value.ticketURI}}">{{showings | date : 'h:mm'}}</a></span></p>
+    </div>
+</div>

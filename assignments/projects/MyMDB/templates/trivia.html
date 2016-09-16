@@ -3,7 +3,7 @@
         <div class="col-xs-12 text-center">
             <h1>Guess the Movie!</h1>
             <p>How many clues do you need until you know the movie?</p>
-            <button class="btn btn-lg mySearchBtn" ng-click="play()">Start!</button>
+            <button class="btn btn-lg triviaBtn" ng-click="play()">Start!</button>
         </div>
     </div>
     
@@ -11,8 +11,8 @@
     <div ng-if="display  && !winDisplay && !loseDisplay">
        <div class="row">
            <div class="col-xs-12 text-center">
-               <button class="btn btn-lg mySearchBtn" ng-click="nextHint()" ng-if="count <= 4">Next Hint</button>
-               <button class="btn btn-lg mySearchBtn" ng-click="solveGame()" ng-if="count >= 5">Make a Guess</button>
+               <button class="btn btn-lg triviaBtn" ng-click="nextHint()" ng-if="count <= 4">Next Hint</button>
+               <button class="btn btn-lg triviaBtn" ng-click="solveGame()" ng-if="count >= 5">Make a Guess</button>
            </div>
        </div>
        <div class="row guessRow" ng-if="count >= 5">

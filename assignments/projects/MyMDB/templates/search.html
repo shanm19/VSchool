@@ -1,33 +1,34 @@
-<div class="container movieCard" ng-if="searchDisplay">
+<!-- if the user queries the database -->
 
+<div class="container movieCard">
     <div class="row posterRow">
         <div class="col-sm-5 text-center">
-            <img src="images/inception.png">
-            <!--                <img src="response.Poster">-->
+<!--            <img src="images/inception.png">-->
+            <img ng-src="{{movie.Poster}}" onerror="this.src='images/inception.png'">
         </div>
         <div class="col-sm-7">
             <div class="row titleRow">
                 <div class="col-xs-12">
-                    <h1>{{response.Title}} <span class="year">({{response.Year}})</span></h1>
+                    <h1>{{movie.Title}} <span class="year">({{movie.Year}})</span></h1>
                 </div>
             </div>
             <div class="row metaRow">
                 <div class="col-xs-12">
-                    <p>{{response.Rated}} | {{response.Runtime}} | {{response.Genre}} | {{response.Released}}</p>
+                    <p>{{movie.Rated}} | {{movie.Runtime}} | {{movie.Genre}} | {{movie.Released}}</p>
                 </div>
             </div>
-            <h5>IMDb: {{response.imdbRating}}/10</h5>
-            <h5>Metascore: {{response.Metascore}}</h5>
-            <h5>Rotten Tomatoes: {{response.tomatoMeter}}%</h5>
+            <h5>IMDb: {{movie.imdbRating | imdb}}</h5>
+            <h5>Metascore: {{movie.Metascore}}</h5>
+            <h5>Rotten Tomatoes: {{movie.tomatoMeter | rotTom}}</h5>
         </div>
     </div>
     <br>
     <div class="row otherData">
         <div class="col-xs-12">
-            <p>{{response.Plot}}</p>
-            <p>Director(s): {{response.Director}}</p>
-            <p>Writer(s): {{response.Writer}}</p>
-            <p>Actors: {{response.Actors}}</p>
+            <p>{{movie.Plot}}</p>
+            <p>Director(s): {{movie.Director}}</p>
+            <p>Writer(s): {{movie.Writer}}</p>
+            <p>Actors: {{movie.Actors}}</p>
         </div>
     </div>
 </div>

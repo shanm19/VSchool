@@ -1,12 +1,29 @@
 <div class="container homeCard">
-    <div class="row trailersRow">
-        <div class="col-xs-12 text-center">
+    <div class="row cardRow">
+        <div class="col-sm-8 text-center leftCell">
+            <h1>Recently Released Trailers</h1>
             <div class="myCarousel" uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
                 <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" ng-src="https://www.youtube.com/embed/dKrVegVI0Us" frameborder="0" allowfullscreen></iframe>
+                    <div style="position: relative;">
+                        <img ng-src="{{slide.image}}" style="width:100%;">
+                        <a href="{{slide.trailerLink}}" class="playBtn"><i class="fa fa-play-circle-o"></i></a>
                     </div>
                 </div>
+            </div>
+            
+            <!-- latest news sections -->
+            
+            <div class="newsRow" ng-repeat="article in news">
+               <hr>
+                <news-scroll article="article"></news-scroll>
+            </div>
+            
+        </div>
+        <!-- home page what's on sidebar -->
+        <div class="col-sm-4 text-center homeSideBar">
+            <h1>What's On Tonight</h1>
+            <div ng-repeat="show in whatsOn track by $index">
+                <whats-on show="show"></whats-on>
             </div>
         </div>
     </div>
