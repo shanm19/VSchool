@@ -1,0 +1,27 @@
+body{
+    color: #555;
+    background-color: #F4F4F4;
+}
+.mainTitle{
+    font-size: 10vw;
+    text-shadow: 3px 3px 3px #ccc;
+}
+.fa-arrow-up:hover{
+    color: skyblue;
+}
+.fa-arrow-down:hover{
+    color: orangered;
+}
+a:hover, a:visited, a:active, a:link{
+    text-decoration: none;
+}
+.well{
+    background-color: #333;
+    color: #eee;
+}
+.title:hover{
+    color: steelblue;
+}
+.myNav a{
+    font-size: 2.5em;
+}

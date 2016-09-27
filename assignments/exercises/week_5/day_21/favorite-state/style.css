@@ -27,3 +27,7 @@ body{
     border: solid 1px #ddd;
     box-shadow: 3px 3px 3px #555;
 }
+
+.minkHover:hover{
+    display: none;
+}

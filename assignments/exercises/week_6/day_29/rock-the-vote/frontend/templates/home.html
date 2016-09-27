@@ -1,0 +1,93 @@
+<!-- New Issue Section -->
+<div class="container">
+    <br>
+    <br>
+    <div class="row text-center">
+        <div class="col-xs-6 col-xs-offset-3">
+            <button class="btn btn-lg btn-primary" ng-click="newIssue()">{{issueButton}}</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- New Issue and Description Add -->
+    <div class="row text-center" ng-if="display">
+        <div class="col-xs-6 col-xs-offset-3 well">
+            <div class="form-group text-left">
+                <label for="issue">Issue:</label>
+                <input class="form-control" id="issue" ng-model="issue">
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" class="form-control" ng-model="description" style="min-height: 100px;" placeholder="Enter description here..."></textarea>
+                <br>
+                <button class="btn btn-md btn-primary" ng-click="submit(issue, description)">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Topics and Comments -->
+<div class="container">
+    <!-- Topic -->
+    <div class="well" ng-repeat="issue in data track by $index" style="padding: 1em; margin: 0;">
+
+        <div class="row">
+            <!-- Arrows and Upvotes -->
+            <div class="col-xs-1 text-center">
+                <p><i class="fa fa-arrow-up" ng-click="upvote($index)"></i></p>
+                <p id="votes_{{ $index }}">{{issue.totalVotes}}</p>
+                <p style="margin-bottom: 0;"><i class="fa fa-arrow-down" ng-click="downvote($index)"></i></p>
+            </div>
+            <!-- Title -->
+            <div class="col-xs-7" style="padding-top: .25em;">
+                <h2 class="title" data-toggle="collapse" data-target="#description_{{ $index }}">{{issue.issue}}</h2>
+            </div>
+            <!-- Comments and Edit Button -->
+            <div class="col-xs-4 text-right" style="padding-top: 1.5em; padding-right: 2em;">
+
+                <button type="button" class="btn btn-md btn-warning" data-toggle="collapse" data-target="#edit_{{ $index }}">Edit</button>
+
+                <button type="button" class="btn btn-md btn-primary" data-toggle="collapse" data-target="#collapse_{{ $index }}">Comments</button>
+
+            </div>
+        </div>
+        <!-- Edit Section -->
+        <div id="edit_{{ $index }}" class="panel-collapse collapse">
+            <!-- Edit Title -->
+            <div class="input-group" style="padding: 1em;">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button" ng-click="editTitle(newTitle, $index)">Change</button>
+                </span>
+                <input id="newTitle_{{ $index }}" type="text" class="form-control" placeholder="New title here..." ng-model="newTitle">
+            </div>
+            <!-- Edit Description -->
+            <div class="input-group" style="padding: 1em;">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button" ng-click="editDescription(newDescription, $index)">Change</button>
+                </span>
+                <input id="newDescription_{{ $index }}" type="text" class="form-control" placeholder="New description here..." ng-model="newDescription">
+            </div>
+        </div>
+        <!-- Collapsible Description -->
+        <div id="description_{{ $index }}" class="panel-collapse collapse text-center">
+            <h4>{{issue.description}}</h4>
+        </div>
+        <!-- Collapsible Comments -->
+        <div id="collapse_{{ $index }}" class="comments panel-collapse collapse">
+            <!-- Add Comment -->
+            <div class="input-group" style="padding: 1em;">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button" ng-click="postComment(newComment, $index)">Add Comment</button>
+                </span>
+                <input id="newComment_{{ $index }}" type="text" class="form-control" placeholder="Add comment here..." ng-model="newComment">
+            </div>
+            <!-- Individual Comments -->
+            <div ng-repeat="comment in issue.comments track by $index" style="padding-left: 1em; padding-top: .5em;">
+                <p>| {{comment}}</p>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

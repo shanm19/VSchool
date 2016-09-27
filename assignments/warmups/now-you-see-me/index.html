@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body ng-controller="MainController">
+
+    <div ng-repeat="magician in magicians track by $index" ng-init="magician.collapsed = true;">
+
+        <div ng-if="magician.collapsed">
+            <button type="button" ng-click="magician.collapsed = !magician.collapsed">Edit</button>
+            <h1>Name: {{magician.name}}</h1>
+            <h3>Age: {{magician.age}}</h3>
+            <h3>Skills:</h3>
+            <div ng-repeat="skill in magician.skills">
+                <p>{{skill}}</p>
+            </div>
+        </div>
+
+        <div ng-if="!magician.collapsed">
+
+            <input type="text" placeholder="New name..." ng-model="magician.name">
+            <input type="text" placeholder="New age..." ng-model="magician.age">
+
+            <button type="button" ng-click="magician.collapsed = !magician.collapsed">Done</button>
+
+            <button type="button" ng-click="magician.collapsed = !magician.collapsed">Cancel</button>
+
+        </div>
+        <hr>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

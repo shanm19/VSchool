@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Web Dev Test</title>
+	<meta charset="utf-8">
+	<meta name="Shan Miller">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="welcome">
+		<h1>Welcome!</h1>
+		<p>
+			This test is intended for web developers.
+			Red Pepper Software owns the rights to this test, and disallows any copy or reproduction of it.
+		</p>
+		<p>
+			You are welcome to utilize the internet to aid in completing this test.
+		</p>
+		<p>
+			Your site will be viewed using file:///path/to/index.html
+		</p>
+		<p>
+			You have 45min to complete this test.
+			Now, look at a clock and record your start time in ISO 8601 format (including timezone) below.
+			After you have completed the test, record your end time in unix time.
+		</p>
+	</div>
+	<div class="times">
+		<div class="time">
+			<span>Start time: Thu Sep 15 08:03:17 2016 GMT</span>
+			<span></span>
+		</div>
+		<div class="time">
+			<span>End time: 1473950009</span>
+			<span></span>
+		</div>
+	</div>
+	<div class="tasks">
+		<h2>Tasks for this page:</h2>
+		<ul>
+			<li>
+				Add styling to:
+				<ul>
+					<li>Change the background of the page</li>
+					<li>Change the text color</li>
+					<li>Put spacing between the welcome, times, and tasks divs</li>
+				</ul>
+			</li>
+			<li>
+				Add what is necessary to inform the browser of:
+				<ul>
+					<li>The creator of the page</li>
+				</ul>
+			</li>
+			<li>
+				Add a link that goes to <a href="/redpeppersoftware-web-dev-test-5f3a34cbf935/test.html">test.html</a>
+			</li>
+			<li>
+				Add a div and click handler:
+				<ul>
+					<li>Have the div appear to be clickable to the user</li>
+					<li>Have the div be a rounded rectangular button with a different background than the page</li>
+					<li>Have a function run when the div is clicked</li>
+					<li>Have the function add a yellow square to the bottom of the page each time it is run</li>
+				</ul>
+			</li>
+			<li>
+				Add a prepopulated textarea with any comments or concerns you have about this test
+			</li>
+		</ul>
+		<h2>Tasks for test.html:</h2>
+		<ul>
+			<li>
+				Add a link back to this page
+			</li>
+			<li>
+				Automatically redirect the user back to index.html after seven seconds
+			</li>
+		</ul>
+	</div>
+	
+	<textarea name="concerns" id="concerns" cols="30" rows="10">My only concern is that it seemed the div button could almost be a button or a div designed to look like a button</textarea>
+	
+	<div id="myBtn" class="divClick">Click</div>
+	
+	<div id="addSquare"></div>
+	
+	<script src="app.js"></script>
+	
+</body>
+</html>

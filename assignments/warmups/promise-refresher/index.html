@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body ng-controller="MainController">
+   
+    <button ng-click="getPeople()">Get People</button>
+   
+    <div ng-repeat="person in people.results">
+        <h1>Name: {{person.name}}</h1>
+        <h4>Birth Year: {{person.birth_year}}</h4>
+    </div>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="services/peopleService.js"></script>
+</body>
+</html>

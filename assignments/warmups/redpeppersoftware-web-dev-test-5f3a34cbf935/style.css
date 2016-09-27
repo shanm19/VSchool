@@ -1,0 +1,29 @@
+body{
+    background-color: #222;
+    color: #ccc;
+}
+.welcome{
+    margin: 2em;
+}
+.tasks{
+    margin: 2em;
+}
+.times{
+    margin: 2em;
+}
+.divClick{
+    font-size: 4em;
+    text-align: center;
+    background-color: red;
+    border-radius: 10px;
+}
+.divClick:hover{
+    color: #222;
+    background-color: crimson;
+}
+.yellow{
+    height: 30px;
+    width: 30px;
+    background-color: yellow;
+    margin: 1em;
+}

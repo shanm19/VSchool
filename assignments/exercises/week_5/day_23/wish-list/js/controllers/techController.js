@@ -5,15 +5,15 @@ app.controller("TechController", ["$scope", function($scope){
     $scope.techList = [
         {
             name: "Samsung Galaxy 7",
-            cost: "$200"
+            cost: "200"
         },
         {
             name: "Windows Surface Pro 4",
-            cost: "$1000"
+            cost: "1000"
         },
         {
             name: "Oculus Rift",
-            cost: "$500"
+            cost: "500"
         }
     ]
     
