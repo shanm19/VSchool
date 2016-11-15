@@ -1,0 +1,15 @@
+{
+  "name": "pair-programming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "steam-roller.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.16.4"
+  }
+}

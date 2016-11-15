@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+</head>
+
+<body ng-controller="MainCtrl" flex layout="center center">
+
+    <div layout="column" ng-cloak flex-gt-sm="70">
+
+        <md-content layout-padding>
+            <div>
+                <form name="userForm" class="md-inline-form" ng-submit="submit(user)">
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>First name</label>
+                            <input ng-model="user.firstName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Last name</label>
+                            <input ng-model="user.lastName">
+                        </md-input-container>
+                    </div>
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Email</label>
+                            <input ng-model="user.email" type="email">
+                        </md-input-container>
+                    </div>
+
+                    <md-input-container class="md-block">
+                        <label>Address</label>
+                        <input ng-model="user.address">
+                    </md-input-container>
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>City</label>
+                            <input ng-model="user.city">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>State</label>
+                            <md-select ng-model="user.state">
+                                <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                                    {{state.abbrev}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Postal Code</label>
+                            <input name="postalCode" ng-model="user.postalCode" placeholder="12345" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+
+                            <div ng-messages="userForm.postalCode.$error" role="alert" multiple>
+                                <div ng-message="required" class="my-message">You must supply a postal code.</div>
+                                <div ng-message="pattern" class="my-message">That doesn't look like a valid postal code.
+                                </div>
+                                <div ng-message="md-maxlength" class="my-message">
+                                    Don't use the long version silly...we don't need to be that specific...
+                                </div>
+                            </div>
+                        </md-input-container>
+                    </div>
+
+                    <md-button class="md-primary" type="submit">Submit</md-button>
+
+                </form>
+            </div>
+        </md-content>
+
+
+    </div>
+    <!-- output -->
+    <md-content ng-repeat="user in userList">
+        <h1>{{user.firstName}} {{user.lastName}}</h1>
+        <h3>{{user.email}}</h3>
+        <h3>{{user.address}}</h3>
+        <h3>{{user.city}}, {{user.state}} {{user.postalCod}}</h3>
+    </md-content>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="app.js"></script>
+    <script src="userFactory.js"></script>
+</body>
+
+</html>

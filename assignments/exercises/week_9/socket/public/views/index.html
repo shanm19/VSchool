@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chat App</title>
+</head>
+
+<body ng-app="app">
+
+    <div ng-controller="ctrl" ng-init="initConnection()">
+        <h1>{{test}}</h1>
+        <!--<div class="chat-box">
+            <div class="chat" ng-repeat="chat in chats">
+                <div class="text">
+                    {{chat.message}}
+                </div>
+            </div>
+            <div class="message-box">
+                <input class="full-width" ng-model="message">
+                <button class="full-width" ng-click="sendMessage()">Send</button>
+            </div>
+        </div>-->
+    </div>
+
+    <script src="/socket.io/lib/socket.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="/public/js/app.js"></script>
+</body>
+
+</html>

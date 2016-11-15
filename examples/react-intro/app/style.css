@@ -1,0 +1,28 @@
+.hello{
+    color: blue;
+    text-decoration: underline;
+}
+.navLink{
+    margin-left: 10px;
+    text-decoration: none;
+    color: mediumpurple;
+    font-size: 25px;
+}
+.footer{
+    background-color: darkgray;
+    position: absolute;
+    bottom: 0px;
+}
+.company-info{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    margin: 15px;
+}
+
+li{
+    margin: 5px;
+}
